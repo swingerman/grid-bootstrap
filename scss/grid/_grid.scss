@@ -1,6 +1,25 @@
+// Guess what...
+d-grid {
+    display: grid;
+}
+
+// Add classes based on max-columns
+@for $c from 1 to $max-columns {
+    .grid-col-start-#{$c} {
+        grid-column-start: $c !important;
+    }
+    .grid-col-end-#{$c} {
+        grid-column-end: $c !important;
+    }
+}
+
+// Generate breakpoint based variants
 @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {
         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        d-#{$breakpoint}-grid {
+            display: grid !important;
+        }
         // grid column start/end responsive classes
         @for $c from 1 to $max-columns {
             .grid-col-#{$breakpoint}-start-#{$c} {
