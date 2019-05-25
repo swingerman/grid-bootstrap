@@ -1,4 +1,4 @@
-d-grid {
+.d-grid {
   display: grid;
 }
 
@@ -58,7 +58,7 @@ d-grid {
   grid-column-end: 7 !important;
 }
 
-d-xs-grid {
+.d-xs-grid {
   display: grid !important;
 }
 
@@ -183,7 +183,7 @@ d-xs-grid {
 }
 
 @media (min-width: 576px) {
-  d-sm-grid {
+  .d-sm-grid {
     display: grid !important;
   }
   .grid-col-sm-start-1 {
@@ -279,7 +279,7 @@ d-xs-grid {
 }
 
 @media (min-width: 768px) {
-  d-md-grid {
+  .d-md-grid {
     display: grid !important;
   }
   .grid-col-md-start-1 {
@@ -375,7 +375,7 @@ d-xs-grid {
 }
 
 @media (min-width: 992px) {
-  d-lg-grid {
+  .d-lg-grid {
     display: grid !important;
   }
   .grid-col-lg-start-1 {
@@ -471,7 +471,7 @@ d-xs-grid {
 }
 
 @media (min-width: 1200px) {
-  d-xl-grid {
+  .d-xl-grid {
     display: grid !important;
   }
   .grid-col-xl-start-1 {
