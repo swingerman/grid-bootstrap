@@ -1,0 +1,30 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        // grid column start/end responsive classes
+        @for $c from 1 to $max-columns {
+            .grid-col-#{$breakpoint}-start-#{$c} {
+                grid-column-start: $c !important;
+            }
+            .grid-col-#{$breakpoint}-end-#{$c} {
+                grid-column-end: $c !important;
+            }
+        }
+        // grid row start/end responsive classes
+        @for $r from 1 to $max-rows {
+            .grid-row-#{$breakpoint}-start-#{$r} {
+                grid-row-start: $r !important;
+            }
+            .grid-row-#{$breakpoint}-end-#{$r} {
+                grid-row-end: $r !important;
+            }
+        }
+        // align self responsive classes
+        .align-self-#{$breakpoint}-start {
+            align-self: start !important;
+        }
+        .align-self-#{$breakpoint}-end {
+            align-self: end !important;
+        }
+    }
+}

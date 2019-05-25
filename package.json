@@ -1,0 +1,38 @@
+{
+    "name": "grid-bootstrap",
+    "version": "0.1.0",
+    "description": "Responsive grid classes for bootstrap 4",
+    "main": "dist/css/grid-bootstrap.css",
+    "scripts": {
+        "start": "npm run watch",
+        "css": "npm-run-all css-compile-main",
+        "css-lint": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
+        "css-compile-main": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/grid-bootstrap.scss dist/css/grid-bootstrap.css",
+        "watch": "nodemon --watch scss/ --ext scss --exec \"npm run css\""
+    },
+    "repository": "git+https://github.com/swingerman/grid-bootstrap.git",
+    "keywords": [
+        "css",
+        "scss",
+        "responsive",
+        "grid",
+        "bootstrap"
+    ],
+    "author": "Miklos Szanyi",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/swingerman/grid-bootstrap/issues"
+    },
+    "homepage": "https://github.com/swingerman/grid-bootstrap#readme",
+    "devDependencies": {
+        "bootstrap": "^4.3.1",
+        "css-lint": "^1.0.1",
+        "node-sass": "^4.12.0",
+        "nodemon": "^1.19.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^6.1.2",
+        "stylelint": "^10.0.1",
+        "stylelint-config-standard": "^18.3.0"
+    },
+    "dependencies": {}
+}
