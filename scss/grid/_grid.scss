@@ -11,6 +11,10 @@
     .grid-col-end-#{$c} {
         grid-column-end: $c !important;
     }
+    .grid-cols-#{$c} {
+        -ms-grid-template-columns: repeat($c, 1fr);
+        grid-template-columns: repeat($c, 1fr);
+    }
 }
 
 // Generate breakpoint based variants
@@ -22,10 +26,6 @@
         }
         // grid columns even
         @for $c from 1 to $max-columns {
-            .grid-cols-#{$c} {
-                -ms-grid-template-columns: repeat($c, 1fr);
-                grid-template-columns: repeat($c, 1fr);
-            }
             .grid-cols-#{$breakpoint}-#{$c} {
                 -ms-grid-template-columns: repeat($c, 1fr);
                 grid-template-columns: repeat($c, 1fr);
@@ -48,19 +48,6 @@
             .grid-row-#{$breakpoint}-end-#{$r} {
                 grid-row-end: $r !important;
             }
-        }
-        // align self responsive classes
-        .align-self-start {
-            align-self: start !important;
-        }
-        .align-self-#{$breakpoint}-start {
-            align-self: start !important;
-        }
-        .align-self-end {
-            align-self: end !important;
-        }
-        .align-self-#{$breakpoint}-end {
-            align-self: end !important;
         }
     }
 }
