@@ -3,23 +3,23 @@
     display: grid;
 }
 
-.grid-aling-items-center {
+.grid-align-items-center {
     align-items: center;
 }
 
-.grid-aling-items-strech {
+.grid-align-items-strech {
     align-items: strech;
 }
 
-.grid-aling-items-start {
+.grid-align-items-start {
     align-items: start;
 }
 
-.grid-aling-items-end {
+.grid-align-items-end {
     align-items: end;
 }
 
-.grid-aling-items-auto {
+.grid-align-items-auto {
     align-items: auto;
 }
 
@@ -45,19 +45,19 @@
             display: grid !important;
         }
         // grid align items
-        .grid-aling-items-#{$breakpoint}-center {
+        .grid-align-items-#{$breakpoint}-center {
             align-items: center !important;
         }
-        .grid-aling-items-#{$breakpoint}-stretch {
+        .grid-align-items-#{$breakpoint}-stretch {
             align-items: stretch !important;
         }
-        .grid-aling-items-#{$breakpoint}-start {
+        .grid-align-items-#{$breakpoint}-start {
             align-items: start !important;
         }
-        .grid-aling-items-#{$breakpoint}-end {
+        .grid-align-items-#{$breakpoint}-end {
             align-items: end !important;
         }
-        .grid-aling-items-#{$breakpoint}-auto {
+        .grid-align-items-#{$breakpoint}-auto {
             align-items: auto !important;
         }
         // grid columns even
