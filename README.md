@@ -86,9 +86,16 @@ TBD
 
 This will create classes to set even width grid columns
 
-```
+```html
 .grid-cols-#
 .grid-cols-sm-#
 .grid-cols-md-#
 ...etc
+```
+
+### Align items
+
+```html
+.grid-align-items-{start|end|auto|center|stretch}
+.grid-align-items-{sm|md|lg}-{start|end|auto|center|stretch}
 ```

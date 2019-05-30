@@ -3,6 +3,26 @@
     display: grid;
 }
 
+.grid-aling-items-center {
+    align-items: center;
+}
+
+.grid-aling-items-strech {
+    align-items: strech;
+}
+
+.grid-aling-items-start {
+    align-items: start;
+}
+
+.grid-aling-items-end {
+    align-items: end;
+}
+
+.grid-aling-items-auto {
+    align-items: auto;
+}
+
 // Add classes based on max-columns
 @for $c from 1 to $max-columns {
     .grid-col-start-#{$c} {
@@ -23,6 +43,22 @@
         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
         .d-#{$breakpoint}-grid {
             display: grid !important;
+        }
+        // grid align items
+        .grid-aling-items-#{$breakpoint}-center {
+            align-items: center !important;
+        }
+        .grid-aling-items-#{$breakpoint}-stretch {
+            align-items: stretch !important;
+        }
+        .grid-aling-items-#{$breakpoint}-start {
+            align-items: start !important;
+        }
+        .grid-aling-items-#{$breakpoint}-end {
+            align-items: end !important;
+        }
+        .grid-aling-items-#{$breakpoint}-auto {
+            align-items: auto !important;
         }
         // grid columns even
         @for $c from 1 to $max-columns {
