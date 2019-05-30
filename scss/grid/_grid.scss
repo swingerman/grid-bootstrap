@@ -20,6 +20,13 @@
         .d-#{$breakpoint}-grid {
             display: grid !important;
         }
+        // grid columns even
+        @for $c from 1 to $max-columns {
+            .grid-cols-#{breakpoint}-#{$c} {
+                -ms-grid-template-columns: repeat($c, 1fr);
+                grid-template-columns: repeat($c, 1fr);
+            }
+        }
         // grid column start/end responsive classes
         @for $c from 1 to $max-columns {
             .grid-col-#{$breakpoint}-start-#{$c} {

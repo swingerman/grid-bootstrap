@@ -27,6 +27,15 @@ Or, if you already imported bootstrap sources just import grid bootstrap files
 @import '{relative/path}/node_modules/bootstrap/scss/grid/grid';
 ```
 
+#### Variables
+
+You can override the following variables to adapt to your setup.
+
+```scss
+$max-columns: 8 !default;
+$max-rows: 8 !default;
+```
+
 Now you can compile your scss.
 
 ### For using compiled
@@ -70,5 +79,16 @@ TBD
 .grid-row-end-#
 .grid-row-sm-end-#
 .grid-row-md-end-#
+...etc
+```
+
+### Grid template columns
+
+This will create classes to set even width grid columns
+
+```
+.grid-cols-#
+.grid-cols-sm-#
+.grid-cols-md-#
 ...etc
 ```
