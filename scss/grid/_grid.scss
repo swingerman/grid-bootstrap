@@ -50,8 +50,14 @@
             }
         }
         // align self responsive classes
+        .align-self-start {
+            align-self: start !important;
+        }
         .align-self-#{$breakpoint}-start {
             align-self: start !important;
+        }
+        .align-self-end {
+            align-self: end !important;
         }
         .align-self-#{$breakpoint}-end {
             align-self: end !important;
