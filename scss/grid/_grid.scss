@@ -4,7 +4,7 @@
 }
 
 // Add classes based on max-columns
-@for $c from 1 to $max-columns {
+@for $c from 1 to $max-columns+1 {
     .grid-col-start-#{$c} {
         grid-column-start: $c !important;
     }
@@ -25,14 +25,14 @@
             display: grid !important;
         }
         // grid columns even
-        @for $c from 1 to $max-columns {
+        @for $c from 1 to $max-columns+1 {
             .grid-cols-#{$breakpoint}-#{$c} {
                 -ms-grid-template-columns: repeat($c, 1fr);
                 grid-template-columns: repeat($c, 1fr);
             }
         }
         // grid column start/end responsive classes
-        @for $c from 1 to $max-columns {
+        @for $c from 1 to $max-columns+1 {
             .grid-col-#{$breakpoint}-start-#{$c} {
                 grid-column-start: $c !important;
             }
@@ -41,7 +41,7 @@
             }
         }
         // grid row start/end responsive classes
-        @for $r from 1 to $max-rows {
+        @for $r from 1 to $max-rows+1 {
             .grid-row-#{$breakpoint}-start-#{$r} {
                 grid-row-start: $r !important;
             }
