@@ -24,6 +24,9 @@
         .d-#{$breakpoint}-grid {
             display: grid !important;
         }
+        .d-#{$infix}-grid {
+            display: grid !important;
+        }
         // grid columns even
         @for $c from 1 to $max-columns+1 {
             .grid-cols-#{$breakpoint}-#{$c} {
@@ -47,6 +50,19 @@
             }
             .grid-row-#{$breakpoint}-end-#{$r} {
                 grid-row-end: $r !important;
+            }
+        }
+        // grid spacing
+        @each $prop,
+        $abbrev in (grid-column-gap: cg, grid-row-gap: rg) {
+            @each $size,
+            $length in $spacers {
+                .grid-#{$abbrev}-#{$size} {
+                    #{$prop}: $length !important;
+                }
+                .grid-#{$abbrev}#{$infix}-#{$size} {
+                    #{$prop}: $length !important;
+                }
             }
         }
     }
