@@ -92,3 +92,44 @@ This will create classes to set even width grid columns
 .grid-cols-md-#
 ...etc
 ```
+
+### Grid column and row span
+
+This will create classes to set even width grid columns
+
+#### column span
+```html
+.grid-cs-#
+.grid-cs-sm-#
+.grid-cs-md-#
+...etc
+```
+
+### row span
+
+```html
+.grid-rs-#
+.grid-rs-sm-#
+.grid-rs-md-#
+...etc
+```
+
+### Grid spacing utilities
+
+#### Row gap
+
+```html
+.grid-rg-#
+.grid-rg-sm-#
+.grid-rg-md-#
+...etc
+```
+
+#### Column gap
+
+```html
+.grid-cg-#
+.grid-cg-sm-#
+.grid-cg-md-#
+...etc
+```

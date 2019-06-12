@@ -52,6 +52,15 @@
                 grid-row-end: $r !important;
             }
         }
+        // grid span start/end responsive classes
+        @for $r from 1 to $max-rows+1 {
+            .grid-cs-#{$breakpoint}-#{$r} {
+                grid-column-end: span $r !important;
+            }
+            .grid-rs-#{$breakpoint}-#{$r} {
+                grid-row-end: span $r !important;
+            }
+        }
         // grid spacing
         @each $prop,
         $abbrev in (grid-column-gap: cg, grid-row-gap: rg) {
