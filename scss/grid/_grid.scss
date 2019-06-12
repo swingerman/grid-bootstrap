@@ -36,6 +36,9 @@
         }
         // grid column start/end responsive classes
         @for $c from 1 to $max-columns+1 {
+            .grid-col-#{$breakpoint}-#{$c} {
+                grid-column: $c !important;
+            }
             .grid-col-#{$breakpoint}-start-#{$c} {
                 grid-column-start: $c !important;
             }
@@ -45,6 +48,9 @@
         }
         // grid row start/end responsive classes
         @for $r from 1 to $max-rows+1 {
+            .grid-row-#{$breakpoint}-#{$r} {
+                grid-row: $r !important;
+            }
             .grid-row-#{$breakpoint}-start-#{$r} {
                 grid-row-start: $r !important;
             }
