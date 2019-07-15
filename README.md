@@ -11,20 +11,24 @@ npm i grid-bootstrap
 ## How to use
 
 ### For compiling
-Include the entry point grid-bootstrap.scss into your scss file.
+Include the entry point grid-bootstrap-import.scss into your scss file.
 Replace {relative/path} with the path of your setup
 ```scss
-@import '{relative/path}node_modules/bootstrap/scss/functions';
+@import '{relative/path}/node_modules/bootstrap/scss/functions';
 @import '{relative/path}/node_modules/bootstrap/scss/variables';
 @import '{relative/path}/node_modules/bootstrap/scss/mixins';
-@import '{relative/path}/node_modules/grid-bootstrap/scss/variables';
 @import '{relative/path}/node_modules/bootstrap/scss/grid/grid';
+@import '{relative/path}/node_modules/grid-bootstrap/scss/variables';
+
+@import '{relative/path}/node_modules/grid-bootstrap/scss/grid-bootstrap-import';
 ```
 
 Or, if you already imported bootstrap sources just import grid bootstrap files
 ```scss
 @import '{relative/path}/node_modules/grid-bootstrap/scss/variables';
 @import '{relative/path}/node_modules/bootstrap/scss/grid/grid';
+
+@import '{relative/path}/node_modules/grid-bootstrap/scss/grid-bootstrap-import';
 ```
 
 #### Variables
