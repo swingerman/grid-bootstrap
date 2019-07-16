@@ -67,27 +67,5 @@
                 grid-row-end: span $r !important;
             }
         }
-        // grid spacing
-        @each $prop,
-        $abbrev in (grid-column-gap: cg, grid-row-gap: rg) {
-            @each $size,
-            $length in $spacers {
-                .grid-#{$abbrev}-#{$size} {
-                    #{$prop}: $length !important;
-                }
-                .grid-#{$abbrev}#{$infix}-#{$size} {
-                    #{$prop}: $length !important;
-                }
-            }
-        }
-        // justify
-        @each $val in (start, end, center, stretch) {
-            .justify-self-#{$breakpoint}-#{$val} {
-                justify-self: $val !important;
-            }
-            .justify-self-#{$infix}-#{$val} {
-                justify-self: $val !important;
-            }
-        }
     }
 }
