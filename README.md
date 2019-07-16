@@ -25,9 +25,7 @@ Replace {relative/path} with the path of your setup
 
 Or, if you already imported bootstrap sources just import grid bootstrap files
 ```scss
-@import '{relative/path}/node_modules/grid-bootstrap/scss/variables';
 @import '{relative/path}/node_modules/bootstrap/scss/grid/grid';
-
 @import '{relative/path}/node_modules/grid-bootstrap/scss/grid-bootstrap-import';
 ```
 
@@ -58,15 +56,9 @@ TBD
 
 ```html
 .grid-col-start-#
-.grid-col-sm-start-#
-.grid-col-md-start-#
-...etc
-```
-
-```html
+.grid-col-*-start-#
 .grid-col-end-#
-.grid-col-sm-end-#
-.grid-col-md-end-#
+.grid-col-*-end-#
 ...etc
 ```
 
@@ -74,15 +66,9 @@ TBD
 
 ```html
 .grid-row-start-#
-.grid-row-sm-start-#
-.grid-row-md-start-#
-...etc
-```
-
-```html
+.grid-row-*-start-#
 .grid-row-end-#
-.grid-row-sm-end-#
-.grid-row-md-end-#
+.grid-row-*-end-#
 ...etc
 ```
 
@@ -92,8 +78,7 @@ This will create classes to set even width grid columns
 
 ```html
 .grid-cols-#
-.grid-cols-sm-#
-.grid-cols-md-#
+.grid-cols-*-#
 ...etc
 ```
 
@@ -104,8 +89,7 @@ This will create classes to set even width grid columns
 #### column span
 ```html
 .grid-cs-#
-.grid-cs-sm-#
-.grid-cs-md-#
+.grid-cs-*-#
 ...etc
 ```
 
@@ -113,8 +97,7 @@ This will create classes to set even width grid columns
 
 ```html
 .grid-rs-#
-.grid-rs-sm-#
-.grid-rs-md-#
+.grid-rs-*-#
 ...etc
 ```
 
@@ -124,8 +107,7 @@ This will create classes to set even width grid columns
 
 ```html
 .grid-rg-#
-.grid-rg-sm-#
-.grid-rg-md-#
+.grid-rg-*-#
 ...etc
 ```
 
@@ -133,7 +115,16 @@ This will create classes to set even width grid columns
 
 ```html
 .grid-cg-#
-.grid-cg-sm-#
-.grid-cg-md-#
+.grid-cg-*-#
+...etc
+```
+
+#### Justify self
+
+```html
+.justify-self-*-start
+.justify-self-*-end
+.justify-self-*-center
+.justify-self-*-stretch
 ...etc
 ```

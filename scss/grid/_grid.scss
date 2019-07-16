@@ -80,5 +80,14 @@
                 }
             }
         }
+        // justify
+        @each $val in (start, end, center, stretch) {
+            .justify-self-#{$breakpoint}-#{$val} {
+                justify-self: $val !important;
+            }
+            .justify-self-#{$infix}-#{$val} {
+                justify-self: $val !important;
+            }
+        }
     }
 }

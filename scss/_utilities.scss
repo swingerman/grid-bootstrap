@@ -1,0 +1,38 @@
+// spacing
+$spacingMap: (grid-column-gap: cg, grid-row-gap: rg);
+// justify
+$justify: (start, end, center, stretch);
+@each $val in $justify {
+    .justify-self-#{$val} {
+        justify-self: $val !important;
+    }
+}
+
+// Generate breakpoint based variants
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        // grid spacing
+        @each $prop,
+        $abbrev in $spacingMap {
+            @each $size,
+            $length in $spacers {
+                .grid-#{$abbrev}-#{$size} {
+                    #{$prop}: $length !important;
+                }
+                .grid-#{$abbrev}#{$infix}-#{$size} {
+                    #{$prop}: $length !important;
+                }
+            }
+        }
+        // justify
+        @each $val in $justify {
+            .justify-self-#{$breakpoint}-#{$val} {
+                justify-self: $val !important;
+            }
+            .justify-self-#{$infix}-#{$val} {
+                justify-self: $val !important;
+            }
+        }
+    }
+}
