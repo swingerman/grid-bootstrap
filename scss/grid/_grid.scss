@@ -15,6 +15,17 @@
         -ms-grid-template-columns: repeat($c, 1fr);
         grid-template-columns: repeat($c, 1fr);
     }
+    // grid col span
+    .grid-cs-#{$c} {
+        grid-column-end: span $c !important;
+    }
+}
+
+@for $r from 1 to $max-rows+1 {
+    // grid row span
+    .grid-rs-#{$r} {
+        grid-row-end: span $r !important;
+    }
 }
 
 // Generate breakpoint based variants
@@ -58,11 +69,13 @@
                 grid-row-end: $r !important;
             }
         }
-        // grid span start/end responsive classes
-        @for $r from 1 to $max-rows+1 {
-            .grid-cs-#{$breakpoint}-#{$r} {
-                grid-column-end: span $r !important;
+        // grid col/row span responsive classes
+        @for $c from 1 to $max-columns+1 {
+            .grid-cs-#{$breakpoint}-#{$c} {
+                grid-column-end: span $c !important;
             }
+        }
+        @for $r from 1 to $max-rows+1 {
             .grid-rs-#{$breakpoint}-#{$r} {
                 grid-row-end: span $r !important;
             }
