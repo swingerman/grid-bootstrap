@@ -6,6 +6,7 @@
     "files": [
         "dist"
     ],
+    "unpkg": "dist/css/grid-bootstrap.min.css",
     "scripts": {
         "start": "npm run watch",
         "css": "npm-run-all css-compile-main css-compress",
