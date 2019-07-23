@@ -1,6 +1,6 @@
 {
     "name": "grid-bootstrap",
-    "version": "0.11.1",
+    "version": "0.11.2",
     "description": "Responsive grid classes for bootstrap 4",
     "main": "dist/css/grid-bootstrap.css",
     "files": [
