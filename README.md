@@ -2,10 +2,19 @@
 Responsive grid classes for Bootstrap 4. Extends Bootstrap 4 with display: grid utilities.
 Uses Bootstrap 4 variables and mixins. It will pick up Bootstrap's or your override varaibles such as $grid-breakpoints. To generate responsive grid utilities.
 
-## install
+## Install
 
 ``` bash
 npm i grid-bootstrap
+```
+
+## Use ready css
+
+Link our distributed script in your html's head:
+
+```html
+<link rel="stylesheet" type="text/css" href="//unpkg.com/grid-bootstrap"></script>
+<!-- `grid-bootstrap` is now available on the page -->
 ```
 
 ## How to use
