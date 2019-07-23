@@ -3,12 +3,17 @@
     "version": "0.10.1",
     "description": "Responsive grid classes for bootstrap 4",
     "main": "dist/css/grid-bootstrap.css",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "start": "npm run watch",
-        "css": "npm-run-all css-compile-main",
+        "css": "npm-run-all css-compile-main css-compress",
         "css-lint": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
         "css-compile-main": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/grid-bootstrap.scss dist/css/grid-bootstrap.css",
-        "watch": "nodemon --watch scss/ --ext scss --exec \"npm run css\""
+        "css-compress": "uglifycss dist/css/grid-bootstrap.css --output dist/css/grid-bootstrap.min.css",
+        "watch": "nodemon --watch scss/ --ext scss --exec \"npm run css\"",
+        "prepublish": "css"
     },
     "repository": "git+https://github.com/swingerman/grid-bootstrap.git",
     "keywords": [
@@ -31,7 +36,8 @@
         "npm-run-all": "^4.1.5",
         "postcss-cli": "^6.1.2",
         "stylelint": "^10.0.1",
-        "stylelint-config-standard": "^18.3.0"
+        "stylelint-config-standard": "^18.3.0",
+        "uglifycss": "^0.0.29"
     },
     "dependencies": {
         "bootstrap": "^4.3.1"

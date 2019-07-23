@@ -4880,6 +4880,11 @@ uglify-js@^3.1.4:
     commander "~2.20.0"
     source-map "~0.6.1"
 
+uglifycss@^0.0.29:
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/uglifycss/-/uglifycss-0.0.29.tgz#abe49531155d146e75dd2fdf933d371bc1180054"
+  integrity sha512-J2SQ2QLjiknNGbNdScaNZsXgmMGI0kYNrXaDlr4obnPW9ni1jljb1NeEVWAiTgZ8z+EBWP2ozfT9vpy03rjlMQ==
+
 undefsafe@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/undefsafe/-/undefsafe-2.0.2.tgz#225f6b9e0337663e0d8e7cfd686fc2836ccace76"
