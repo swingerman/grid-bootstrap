@@ -4,7 +4,7 @@
     "description": "Responsive grid classes for bootstrap 4",
     "main": "dist/css/grid-bootstrap.css",
     "files": [
-        "dist"
+        "dist", "scss"
     ],
     "unpkg": "dist/css/grid-bootstrap.min.css",
     "scripts": {
