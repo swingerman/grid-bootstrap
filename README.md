@@ -1,3 +1,5 @@
+![npm](https://img.shields.io/npm/v/grid-bootstrap) ![npm](https://img.shields.io/npm/dw/grid-bootstrap) ![NPM](https://img.shields.io/npm/l/grid-bootstrap)
+
 # grid-bootstrap
 
 Responsive grid classes for Bootstrap 4. Extends Bootstrap 4 with display: grid utilities.
