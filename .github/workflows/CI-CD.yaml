@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: ci-build
-          path: source/design-studio-monogram-plugin/dist/
+          path: dist/
 
 
 
