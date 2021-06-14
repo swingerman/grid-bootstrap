@@ -15,7 +15,8 @@
         "css-compile-main": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/grid-bootstrap.scss dist/css/grid-bootstrap.css",
         "css-compress": "uglifycss dist/css/grid-bootstrap.css --output dist/css/grid-bootstrap.min.css",
         "watch": "nodemon --watch scss/ --ext scss --exec \"npm run css\"",
-        "prepare": "yarn run css"
+        "prepare": "yarn run css",
+        "audit:fix": "npx yarn-audit-fix"
     },
     "repository": "git+https://github.com/swingerman/grid-bootstrap.git",
     "keywords": [
