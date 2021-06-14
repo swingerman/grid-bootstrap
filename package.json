@@ -11,8 +11,8 @@
     "scripts": {
         "start": "npm run watch",
         "css": "npm-run-all css-compile-main css-compress",
-        "css-lint": "stylelint \"scss/**/*.scss\" --syntax scss --cache --cache-location .cache/.stylelintcache",
-        "css-lint:fix": "stylelint \"scss/**/*.scss\" --syntax scss --cache --cache-location .cache/.stylelintcache --fix",
+        "lint-css": "stylelint \"scss/**/*.scss\" --syntax scss --cache --cache-location .cache/.stylelintcache",
+        "lint-css:fix": "stylelint \"scss/**/*.scss\" --syntax scss --cache --cache-location .cache/.stylelintcache --fix",
         "css-compile-main": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/grid-bootstrap.scss dist/css/grid-bootstrap.css",
         "css-compress": "uglifycss dist/css/grid-bootstrap.css --output dist/css/grid-bootstrap.min.css",
         "watch": "nodemon --watch scss/ --ext scss --exec \"npm run css\"",
