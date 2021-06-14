@@ -3,7 +3,7 @@
 Responsive grid classes for Bootstrap 4. Extends Bootstrap 4 with display: grid utilities.
 Uses Bootstrap 4 variables and mixins. It will pick up Bootstrap's or your override varaibles such as $grid-breakpoints. To generate responsive grid utilities.
 
-## Looking form Bootstrap 5 support?
+## Looking for Bootstrap 5 support?
 
 We've got you covered.
 Use __[grid-bootstrap5](https://www.npmjs.com/package/grid-bootstrap5)__
