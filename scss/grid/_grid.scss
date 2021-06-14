@@ -1,84 +1,93 @@
 // Guess what...
 .d-grid {
-    display: grid;
+  display: grid;
 }
 
 // Add classes based on max-columns
 @for $c from 1 to $max-columns+1 {
-    .grid-col-start-#{$c} {
-        grid-column-start: $c !important;
-    }
-    .grid-col-end-#{$c} {
-        grid-column-end: $c !important;
-    }
-    .grid-cols-#{$c} {
-        -ms-grid-template-columns: repeat($c, 1fr);
-        grid-template-columns: repeat($c, 1fr);
-    }
-    // grid col span
-    .grid-cs-#{$c} {
-        grid-column-end: span $c !important;
-    }
+  .grid-col-start-#{$c} {
+    grid-column-start: $c !important;
+  }
+
+  .grid-col-end-#{$c} {
+    grid-column-end: $c !important;
+  }
+
+  .grid-cols-#{$c} {
+    -ms-grid-template-columns: repeat($c, 1fr);
+    grid-template-columns: repeat($c, 1fr);
+  }
+  // grid col span
+  .grid-cs-#{$c} {
+    grid-column-end: span $c !important;
+  }
 }
 
 @for $r from 1 to $max-rows+1 {
-    // grid row span
-    .grid-rs-#{$r} {
-        grid-row-end: span $r !important;
-    }
+  // grid row span
+  .grid-rs-#{$r} {
+    grid-row-end: span $r !important;
+  }
 }
 
 // Generate breakpoint based variants
 @each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint) {
-        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-        .d-#{$breakpoint}-grid {
-            display: grid !important;
-        }
-        .d-#{$infix}-grid {
-            display: grid !important;
-        }
-        // grid columns even
-        @for $c from 1 to $max-columns+1 {
-            .grid-cols-#{$breakpoint}-#{$c} {
-                -ms-grid-template-columns: repeat($c, 1fr);
-                grid-template-columns: repeat($c, 1fr);
-            }
-        }
-        // grid column start/end responsive classes
-        @for $c from 1 to $max-columns+1 {
-            .grid-col-#{$breakpoint}-#{$c} {
-                grid-column: $c !important;
-            }
-            .grid-col-#{$breakpoint}-start-#{$c} {
-                grid-column-start: $c !important;
-            }
-            .grid-col-#{$breakpoint}-end-#{$c} {
-                grid-column-end: $c !important;
-            }
-        }
-        // grid row start/end responsive classes
-        @for $r from 1 to $max-rows+1 {
-            .grid-row-#{$breakpoint}-#{$r} {
-                grid-row: $r !important;
-            }
-            .grid-row-#{$breakpoint}-start-#{$r} {
-                grid-row-start: $r !important;
-            }
-            .grid-row-#{$breakpoint}-end-#{$r} {
-                grid-row-end: $r !important;
-            }
-        }
-        // grid col/row span responsive classes
-        @for $c from 1 to $max-columns+1 {
-            .grid-cs-#{$breakpoint}-#{$c} {
-                grid-column-end: span $c !important;
-            }
-        }
-        @for $r from 1 to $max-rows+1 {
-            .grid-rs-#{$breakpoint}-#{$r} {
-                grid-row-end: span $r !important;
-            }
-        }
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .d-#{$breakpoint}-grid {
+      display: grid !important;
     }
+
+    .d-#{$infix}-grid {
+      display: grid !important;
+    }
+    // grid columns even
+    @for $c from 1 to $max-columns+1 {
+      .grid-cols-#{$breakpoint}-#{$c} {
+        -ms-grid-template-columns: repeat($c, 1fr);
+        grid-template-columns: repeat($c, 1fr);
+      }
+    }
+    // grid column start/end responsive classes
+    @for $c from 1 to $max-columns+1 {
+      .grid-col-#{$breakpoint}-#{$c} {
+        grid-column: $c !important;
+      }
+
+      .grid-col-#{$breakpoint}-start-#{$c} {
+        grid-column-start: $c !important;
+      }
+
+      .grid-col-#{$breakpoint}-end-#{$c} {
+        grid-column-end: $c !important;
+      }
+    }
+    // grid row start/end responsive classes
+    @for $r from 1 to $max-rows+1 {
+      .grid-row-#{$breakpoint}-#{$r} {
+        grid-row: $r !important;
+      }
+
+      .grid-row-#{$breakpoint}-start-#{$r} {
+        grid-row-start: $r !important;
+      }
+
+      .grid-row-#{$breakpoint}-end-#{$r} {
+        grid-row-end: $r !important;
+      }
+    }
+    // grid col/row span responsive classes
+    @for $c from 1 to $max-columns+1 {
+      .grid-cs-#{$breakpoint}-#{$c} {
+        grid-column-end: span $c !important;
+      }
+    }
+
+    @for $r from 1 to $max-rows+1 {
+      .grid-rs-#{$breakpoint}-#{$r} {
+        grid-row-end: span $r !important;
+      }
+    }
+  }
 }
