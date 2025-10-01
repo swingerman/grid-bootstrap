@@ -11,8 +11,8 @@
     "scripts": {
         "start": "npm run watch",
         "css": "npm-run-all css-compile-main css-compress",
-        "lint-css": "stylelint \"scss/**/*.scss\" --syntax scss --cache --cache-location .cache/.stylelintcache",
-        "lint-css:fix": "stylelint \"scss/**/*.scss\" --syntax scss --cache --cache-location .cache/.stylelintcache --fix",
+        "lint-css": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
+        "lint-css:fix": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache --fix",
         "css-compile-main": "sass --style=expanded ./scss/grid-bootstrap.scss ./dist/css/grid-bootstrap.css",
         "css-compress": "uglifycss dist/css/grid-bootstrap.css --output dist/css/grid-bootstrap.min.css",
         "watch": "nodemon --watch scss/ --ext scss --exec \"npm run css\"",
@@ -34,23 +34,22 @@
     },
     "homepage": "https://github.com/swingerman/grid-bootstrap#readme",
     "devDependencies": {
-        "css-lint": "^1.0.1",
-        "husky": "^6.0.0",
-        "nodemon": "^1.19.0",
+        "husky": "^9.1.7",
+        "nodemon": "^3.1.7",
         "npm-run-all": "^4.1.5",
-        "postcss-cli": "^6.1.2",
-        "sass": "^1.43.2",
-        "stylelint": "^10.0.1",
-        "stylelint-config-standard": "^18.3.0",
-        "stylelint-scss": "^3.19.0",
+        "postcss": "^8.5.1",
+        "postcss-cli": "^11.0.0",
+        "sass": "^1.81.0",
+        "stylelint": "^16.12.0",
+        "stylelint-config-standard-scss": "^13.1.0",
         "uglifycss": "^0.0.29"
     },
     "dependencies": {
-        "bootstrap": "^4.3.1"
+        "bootstrap": "^4.6.2"
     },
     "lint-staged": {
         "src/**/*.scss": [
-            "stylelint --syntax scss --fix",
+            "stylelint --fix",
             "git add"
         ]
     },
