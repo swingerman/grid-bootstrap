@@ -32,6 +32,6 @@ jobs:
           name: ci-build
           path: dist/
 
-      - uses: JS-DevTools/npm-publish@v3
+      - uses: JS-DevTools/npm-publish@v4
         with:
           token: ${{ secrets.NPM_TOKEN }}

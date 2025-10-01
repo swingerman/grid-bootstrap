@@ -4,8 +4,20 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
 
-  - package-ecosystem: "yarn"
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+    labels:
+      - "dependencies"
+      - "npm"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
